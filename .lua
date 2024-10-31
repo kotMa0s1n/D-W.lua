@@ -31,7 +31,7 @@ local toggle = tab:CreateToggle("Фарм", false, function (value)
     togglefarm = value
     farmvalue = value
 end)
-local textbox = tab:CreateTextbox("Собирание монет \ стоп (секунды)", function(value)
+local textbox = tab:CreateTextbox("Временный стоп авто фарма (секунды)", function(value)
     pausedelay = tonumber(value)
 end, "Впишите число")
 local button = tabCredits:CreateButton("maxkiti01 (Вставляется в буфер обмена)", function()
