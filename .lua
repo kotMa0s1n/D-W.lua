@@ -1,20 +1,14 @@
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/kotMa0s1n/maxkiti01/main/max.lua"))()
 local _, library = pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Osmium/main/OsmiumLibrary.lua")))
-
-local window = library:CreateWindow("Drive World Farm By cursedv2#3199")
-local tab = window:CreateTab("Farm")
-local tabCredits = window:CreateTab("Credits")
-
+local window = library:CreateWindow("Drive World Farm By maxkiti01")
+local tab = window:CreateTab("Фарм")
+local tabCredits = window:CreateTab("Создатели")
 local togglefarm = false
 local pausedelay = 60
 local farmvalue = false
-
 task.spawn(function()
 	repeat task.wait() until not mouse.Target:FindFirstChild("AttachmentHighlight")
 	-- Code
 end)
-
 function delayactivate()
     pcall(function()
             task.spawn(function()
@@ -30,31 +24,25 @@ function delayactivate()
     end)
     end)
 end
-
-local toggle = tab:CreateToggle("Farm", false, function (value)
+local toggle = tab:CreateToggle("Фарм", false, function (value)
     if value == true then 
         delayactivate() 
     end
     togglefarm = value
     farmvalue = value
 end)
-
-local textbox = tab:CreateTextbox("Collect Money Delay (In seconds)", function(value)
+local textbox = tab:CreateTextbox("Собирание монет \ стоп (секунды)", function(value)
     pausedelay = tonumber(value)
-end, "Write number here")
-
-local button = tabCredits:CreateButton("Osmium Library", function()
+end, "Впишите число")
+local button = tabCredits:CreateButton("maxkiti01 (Вставляется в буфер обмена)", function()
     pcall(function()
-        setclipboard("https://github.com/TrixAde/Osmium/blob/main/OsmiumLibraryDocumentation.md")
+        setclipboard("https://t.me/+gyH9PbgbmdwwMTky")
     end)
 end)
-
-
 while true do 
     pcall(function()
             if togglefarm == true then 
         game:GetService("Workspace").Gravity = 500
-
         for i, v in pairs(game:GetService("Workspace").Cars:GetChildren()) do
             if tostring(v.Owner.Value) == game:GetService("Players").LocalPlayer.Name then 
                 v.Main.CFrame = CFrame.new(0, 500, 0)
@@ -67,4 +55,3 @@ while true do
     end
     end)
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/kotMa0s1n/maxkiti01/main/max.lua"))()
