@@ -1,7 +1,7 @@
 local _, library = pcall(loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Osmium/main/OsmiumLibrary.lua")))
-local window = library:CreateWindow("Drive World Farm By maxkiti01")
-local tab = window:CreateTab("Фарм")
-local tabCredits = window:CreateTab("Создатели")
+local window = library:CreateWindow("Drive World Farm")
+local tab = window:CreateTab("Farm")
+local tabCredits = window:CreateTab("Credit")
 local togglefarm = false
 local pausedelay = 60
 local farmvalue = false
@@ -24,16 +24,16 @@ function delayactivate()
     end)
     end)
 end
-local toggle = tab:CreateToggle("Фарм", false, function (value)
+local toggle = tab:CreateToggle("Farm", false, function (value)
     if value == true then 
         delayactivate() 
     end
     togglefarm = value
     farmvalue = value
 end)
-local textbox = tab:CreateTextbox("Временный стоп авто фарма (секунды)", function(value)
+local textbox = tab:CreateTextbox("Temporary stop of auto farm (seconds)", function(value)
     pausedelay = tonumber(value)
-end, "Впишите число")
+end, "Number")
 local button = tabCredits:CreateButton("Made By maxkiti01", function()
     local Babo = "https://funpay.com/users/6412543/"
 setclipboard(tostring(Babo))
