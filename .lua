@@ -34,10 +34,13 @@ end)
 local textbox = tab:CreateTextbox("Временный стоп авто фарма (секунды)", function(value)
     pausedelay = tonumber(value)
 end, "Впишите число")
-local button = tabCredits:CreateButton("maxkiti01 (Вставляется в буфер обмена)", function()
-    pcall(function()
-        setclipboard("https://t.me/+gyH9PbgbmdwwMTky")
-    end)
+local button = tabCredits:CreateButton("Made By maxkiti01", function()
+    local Babo = "https://funpay.com/users/6412543/"
+setclipboard(tostring(Babo))
+end)
+local button = tabCredits:CreateButton("Helper To0Gts", function()
+    local Bab = "https://t.me/To0Gts"
+setclipboard(tostring(Bab))
 end)
 while true do 
     pcall(function()
